@@ -1,0 +1,18 @@
+FUNCTION palindrome(mot : STRING) : BOOLEAN
+VAR
+    result : BOOLEAN
+    i,n : INTEGER
+BEGIN
+    n := mot.length;
+    result := true;
+    i := 0;
+    WHILE (result AND i <= n) DO
+        IF (mot[i] <> mot[n-1-i]) THEN
+            result := false; 
+        ELSE
+            result := true;
+        END_IF
+        i := i+1
+    END_WHILE
+    RETURN result;
+END
